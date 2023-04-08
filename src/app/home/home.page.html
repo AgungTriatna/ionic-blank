@@ -1,10 +1,10 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Login
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -13,8 +13,29 @@
     </ion-toolbar>
   </ion-header>
 
+
+
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <h1><b><ion-icon name="person-circle-outline"></ion-icon>&nbsp;&nbsp;Login</b></h1>
+
+    <ion-item fill="outline">
+      <ion-label position="floating">Username</ion-label>
+      <ion-input [(ngModel)]="form.username" [ngModelOptions]="{standalone:true}" placeholder="Enter text"></ion-input>
+    </ion-item>
+
+    <br>
+
+    <ion-item fill="outline">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="form.password" [ngModelOptions]="{standalone:true}" type="Password"
+        placeholder="Enter text"></ion-input>
+    </ion-item>
+
+    <br>
+
+    <ion-button (click)="doLogin()" expand="block"><ion-icon name="key-outline"></ion-icon>&nbsp;&nbsp;
+      Login</ion-button>
+
   </div>
 </ion-content>
